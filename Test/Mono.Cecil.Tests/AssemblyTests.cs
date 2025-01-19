@@ -26,6 +26,12 @@ namespace Mono.Cecil.Tests {
 		}
 
 		[Test]
+		public void Polyfills ()
+		{
+			TestModule ("Polyfills.dll", _ => { });
+		}
+
+		[Test]
 		public void ParseLowerCaseNameParts ()
 		{
 			var name = AssemblyNameReference.Parse ("Foo, version=2.0.0.0, culture=fr-FR");
